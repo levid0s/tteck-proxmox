@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-source <(curl -s https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+echo "SCRIPT_DIR=$SCRIPT_DIR"
+source "$SCRIPT_DIR/../misc/build.func"
+return 0
+
 # Copyright (c) 2021-2024 community-scripts ORG
 # Author: [YourUserName]
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE

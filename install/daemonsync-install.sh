@@ -20,16 +20,16 @@ $STD apt-get install -y mc
 $STD apt-get install -y g++-multilib
 msg_ok "Installed Dependencies"
 
-msg_info "Installing Daemon Sync Server"
-wget -qL https://github.com/community-scripts/ProxmoxVE/raw/main/misc/daemonsync_2.2.0.0059_amd64.deb
-$STD dpkg -i daemonsync_2.2.0.0059_amd64.deb
-msg_ok "Installed Daemon Sync Server"
+msg_info "Installing Daemon Sync Server [Deactivated by levid0s until security analysis]"
+# wget -qL https://github.com/com unity-scripts/ProxmoxVE/raw/main/misc/daemonsync_2.2.0.0059_amd64.deb
+# $STD dpkg -i daemonsync_2.2.0.0059_amd64.deb
+# msg_ok "Installed Daemon Sync Server"
 
 motd_ssh
 customize
 
 msg_info "Cleaning up"
-rm -rf daemonsync_2.2.0.0059_amd64.deb
+# rm -rf daemonsync_2.2.0.0059_amd64.deb
 $STD apt-get autoremove >/dev/null
 $STD apt-get autoclean >/dev/null
 msg_ok "Cleaned"
